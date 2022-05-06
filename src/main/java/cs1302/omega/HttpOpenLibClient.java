@@ -8,7 +8,7 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.net.http.HttpResponse.BodyHandlers;
 import java.nio.charset.StandardCharsets;
-
+import com.google.gson.annotations.SerializedName;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -39,7 +39,30 @@ public class HttpOpenLibClient {
      */
     public HttpOpenLibClient() {
         limit = URLEncoder.encode("15", StandardCharsets.UTF_8);
-    }
+    } //HttpOpenLibClient
+
+   /**
+    * This class contains variables that are used throughout the class.
+    */
+    public class ILibResponse {
+
+        public int numFound;
+        public ILibResult[] docs;
+
+    } // ILibResponse
+
+   /**
+    * This class contains variables that are used in othre classes.
+    */
+    public class ILibResult {
+
+        public String title;
+        public String titleSuggest;
+        public String[] isbn;
+        @SerializedName("cover_i")
+        public Integer cover;
+
+    } // ILibResult
 
     /**
      * The getResults method returns an array of type HttpResult based on API search
@@ -93,7 +116,7 @@ public class HttpOpenLibClient {
 
         } // for
         return httpResult;
-    }
+    } //getResults
 
     /**
      * The getURI method returns the current url used in the API call.
@@ -101,7 +124,7 @@ public class HttpOpenLibClient {
      */
     public String getURI() {
         return uri;
-    }
+    } //getURI
 
     /**
      * The readCoverImg method downloads the image url in a byte array to be used
@@ -123,6 +146,6 @@ public class HttpOpenLibClient {
             return null;
         }
 
-    }
+    } //readCoverImg
 
 }
