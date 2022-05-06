@@ -141,7 +141,7 @@ public class OmegaApp extends Application {
             task.start();
             scene = new Scene(border);
             stage = new Stage();
-            stage.setTitle("Gallery!");
+            stage.setTitle("Books Search");
             stage.setScene(scene);
             stage.setMaximized(true);
             stage.show();
@@ -435,6 +435,8 @@ public class OmegaApp extends Application {
 
         areaBooksRunInfo.setText("Resale Information based on the quality of" +
             " the selected book - From BooksRun.com API\n");
+        areaBooksRunInfo.appendText("If price is $0, BooksRun.com is currently not buying " +
+            "selected book from users\n");
         areaBooksRunInfo.appendText("Status: " + oBooksRunResult.result.status + "\n");
 
         areaBooksRunInfo.appendText("Info: " +
