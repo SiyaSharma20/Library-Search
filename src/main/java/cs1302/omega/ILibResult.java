@@ -12,5 +12,5 @@ public class ILibResult {
     public String[] isbn;
     @SerializedName("cover_i")
     public Integer cover;
-    //public Integer cover_i;
+
 } // ILibResult

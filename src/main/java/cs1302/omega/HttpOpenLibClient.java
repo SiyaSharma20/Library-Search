@@ -78,7 +78,7 @@ public class HttpOpenLibClient {
         }
 
         // populate httpResult with information extracted from docs array
-        // creates cover page url associated with coverI information
+        // creates cover page url associated with cover information
         for (int i = 0; i < ilibResponse.docs.length; i++) {
 
             ILibResult result = ilibResponse.docs[i];

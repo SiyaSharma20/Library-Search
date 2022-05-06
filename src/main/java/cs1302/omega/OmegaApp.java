@@ -398,8 +398,10 @@ public class OmegaApp extends Application {
                 GridPane.setValignment(gb, VPos.CENTER);
                 GridPane.setVgrow(gb, Priority.ALWAYS);
             }
+
         }
-        status.setText("Click on the book covers below to get more information " +
+        getGridButton(0,0).fire();
+        status.setText("Click on the different book covers below to get more information " +
             "and book resale prices from BooksRun.com");
         progressBar.setProgress(100);
 
