@@ -1,1 +1,1 @@
-# cs1302-omega
+# Library Search Project
